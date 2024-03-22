@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmngr.TasksController">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="800.0">
+         <left>
+            <VBox prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #14213d;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="tasksButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToTasks" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #01161e;" text="Zadania" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/icons8-inspection-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="doneTasksButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToDoneTasks" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #01161e;" text="Zrealizowane" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/icons8-inspection-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="manageTaksksButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToManageTasks" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #01161e;" text="Zarządzanie zadaniami" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/icons8-manage_task-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="manageTeamButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToManageTeam" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #01161e; -fx-border-color: #aec3b0; -fx-border-radius: 5;" text="Zarządzanie zespołem" textFill="#ffbf00">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/icons8-conference_hover-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="reportsButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToReports" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #01161e;" text="Statystyki" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/icons8-report-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <HBox prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #14213d;" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ButtonBar prefHeight="40.0" prefWidth="200.0">
+                    <buttons>
+                      <Button mnemonicParsing="false" text="Button" />
+                    </buttons>
+                  </ButtonBar>
+               </children></VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
