@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmngr.TasksController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmngr.SideMenuController">
    <children>
       <BorderPane prefHeight="500.0" prefWidth="800.0">
          <left>
@@ -71,14 +71,7 @@
             <HBox prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #14213d;" BorderPane.alignment="CENTER" />
          </top>
          <center>
-            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-               <children>
-                  <ButtonBar prefHeight="40.0" prefWidth="200.0">
-                    <buttons>
-                      <Button mnemonicParsing="false" text="Button" />
-                    </buttons>
-                  </ButtonBar>
-               </children></VBox>
+            <fx:include source="tasksSection.fxml" />
          </center>
       </BorderPane>
    </children>

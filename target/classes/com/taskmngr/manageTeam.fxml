@@ -15,7 +15,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
    prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21"
-   xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmngr.TasksController">
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmngr.SideMenuController">
    <children>
       <BorderPane prefHeight="500.0" prefWidth="800.0">
          <left>
