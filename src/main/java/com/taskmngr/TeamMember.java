@@ -35,4 +35,9 @@ public class TeamMember {
     public void setPosition(String position) {
         this.position = position;
     }
+
+    public String getFullName() {
+        return firstName + " " + lastName;
+    }
+
 }

@@ -10,16 +10,22 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import java.io.FileReader;
-import java.io.FileWriter;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.Reader;
+import java.io.Writer;
 import java.lang.reflect.Type;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ManageTeamController {
     private ObservableList<TeamMember> teamMembers = FXCollections.observableArrayList();
-    private static final String JSON_FILE = "team_members.json";
+    private static final String MEMBERS_FILE = "team_members.json";
     private Gson gson = new Gson();
 
     @FXML
@@ -48,7 +54,7 @@ public class ManageTeamController {
     }
 
     private void saveTeamMembers() {
-        try (FileWriter writer = new FileWriter(JSON_FILE)) {
+        try (Writer writer = new OutputStreamWriter(new FileOutputStream(MEMBERS_FILE), StandardCharsets.UTF_8)) {
             gson.toJson(new ArrayList<>(teamMembers), writer);
         } catch (IOException e) {
             e.printStackTrace();
@@ -56,7 +62,7 @@ public class ManageTeamController {
     }
 
     private void loadTeamMembers() {
-        try (FileReader reader = new FileReader(JSON_FILE)) {
+        try (Reader reader = new InputStreamReader(new FileInputStream(MEMBERS_FILE), StandardCharsets.UTF_8)) {
             Type listOfTeamMembersType = new TypeToken<List<TeamMember>>() {
             }.getType();
             List<TeamMember> members = gson.fromJson(reader, listOfTeamMembersType);
@@ -87,7 +93,15 @@ public class ManageTeamController {
 
     @FXML
     private void deleteMember() {
-        System.out.println("usuwam");
+        int selectedIndex = teamTable.getSelectionModel().getSelectedIndex();
+        if (selectedIndex >= 0) {
+            TeamMember selectedMember = teamTable.getItems().get(selectedIndex);
+            teamTable.getItems().remove(selectedIndex);
+            saveTeamMembers();
+            System.out.println("Usunięto członka zespołu: " + selectedMember);
+        } else {
+            System.out.println("Zaznacz członka zespołu do usunięcia.");
+        }
     }
 
 }

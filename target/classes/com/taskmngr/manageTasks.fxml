@@ -72,16 +72,7 @@
             <HBox prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #14213d;" BorderPane.alignment="CENTER" />
          </top>
          <center>
-            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-               <children>
-                  <TableView prefHeight="303.0" prefWidth="600.0">
-                    <columns>
-                      <TableColumn prefWidth="138.0" text="Zadanie" />
-                      <TableColumn prefWidth="241.0" text="Opis" />
-                        <TableColumn minWidth="0.0" prefWidth="109.0" text="Osoba" />
-                    </columns>
-                  </TableView>
-               </children></VBox>
+            <fx:include source="manageTasksSection.fxml" />
          </center>
       </BorderPane>
    </children>
