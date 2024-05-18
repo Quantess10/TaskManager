@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="500.0" prefWidth="600.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmngr.ManageTeamController">
+    <children>
+       <VBox prefHeight="60.0" prefWidth="600.0">
+          <children>
+             <HBox prefHeight="30.0" prefWidth="200.0">
+                <children>
+                   <VBox prefHeight="20.0" prefWidth="200.0">
+                      <children>
+                         <Label prefHeight="40.0" prefWidth="200.0" text="Imię" textAlignment="CENTER">
+                            <VBox.margin>
+                               <Insets />
+                            </VBox.margin>
+                            <padding>
+                               <Insets left="20.0" />
+                            </padding>
+                         </Label>
+                      </children>
+                   </VBox>
+                   <VBox prefHeight="60.0" prefWidth="200.0">
+                      <children>
+                         <Label prefHeight="40.0" prefWidth="200.0" text="Nazwisko" textAlignment="CENTER">
+                            <padding>
+                               <Insets left="20.0" />
+                            </padding>
+                         </Label>
+                      </children>
+                   </VBox>
+                   <VBox prefHeight="30.0" prefWidth="200.0">
+                      <children>
+                         <Label prefHeight="40.0" prefWidth="200.0" text="Stanowisko" textAlignment="CENTER">
+                            <padding>
+                               <Insets left="20.0" />
+                            </padding>
+                         </Label>
+                      </children>
+                   </VBox>
+                </children>
+             </HBox>
+             <HBox layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="200.0">
+                <children>
+                   <VBox prefHeight="30.0" prefWidth="200.0">
+                      <children>
+                         <TextField fx:id="addFirstNameField">
+                            <VBox.margin>
+                               <Insets left="10.0" right="5.0" />
+                            </VBox.margin>
+                         </TextField>
+                      </children>
+                   </VBox>
+                   <VBox prefHeight="60.0" prefWidth="200.0">
+                      <children>
+                         <TextField fx:id="addLastNameField">
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </VBox.margin></TextField>
+                      </children>
+                   </VBox>
+                   <VBox prefHeight="30.0" prefWidth="200.0">
+                      <children>
+                         <TextField fx:id="addPositionField">
+                           <VBox.margin>
+                              <Insets left="5.0" right="10.0" />
+                           </VBox.margin></TextField>
+                      </children>
+                   </VBox>
+                </children>
+             </HBox>
+          </children>
+       </VBox>
+       <ButtonBar prefHeight="40.0" prefWidth="600.0">
+          <buttons>
+           <Button minWidth="600.0" mnemonicParsing="false" onAction="#addMember" prefHeight="30.0" prefWidth="600.0" text="Dodaj nowego członka zespołu">
+                <opaqueInsets>
+                   <Insets />
+                </opaqueInsets>
+             </Button>
+             <Button minWidth="600.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="600.0" onAction="#deleteMember" text="Usuń członka zespołu">
+                <opaqueInsets>
+                   <Insets />
+                </opaqueInsets>
+             </Button>
+          </buttons>
+          <VBox.margin>
+             <Insets right="15.0" />
+          </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+       </ButtonBar>
+      <TableView prefHeight="400.0" prefWidth="600.0" fx:id="teamTable">
+        <columns>
+          <TableColumn prefWidth="200.0" fx:id="firstNameColumn" text="Imię" />
+          <TableColumn prefWidth="200.0" fx:id="lastNameColumn" text="Nazwisko" />
+            <TableColumn prefWidth="200.0" fx:id="positionColumn" text="Stanowisko" />
+        </columns>
+      </TableView>
+    </children></VBox>

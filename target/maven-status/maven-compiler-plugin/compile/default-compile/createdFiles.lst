@@ -1,0 +1,5 @@
+com\taskmngr\ManageTeamController.class
+com\taskmngr\App.class
+module-info.class
+com\taskmngr\TasksController.class
+com\taskmngr\TeamMember.class
