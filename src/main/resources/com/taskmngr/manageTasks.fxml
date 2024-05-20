@@ -11,9 +11,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmngr.SideMenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1200" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmngr.SideMenuController">
    <children>
-      <BorderPane prefHeight="500.0" prefWidth="800.0">
+      <BorderPane prefHeight="500.0" prefWidth="1200">
          <left>
             <VBox prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #14213d;" BorderPane.alignment="CENTER">
                <children>
@@ -77,7 +77,7 @@
             </VBox>
          </left>
          <top>
-            <HBox prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #14213d;" BorderPane.alignment="CENTER" />
+            <HBox prefHeight="50.0" prefWidth="1200" style="-fx-background-color: #14213d;" BorderPane.alignment="CENTER" />
          </top>
          <center>
             <fx:include source="manageTasksSection.fxml" />

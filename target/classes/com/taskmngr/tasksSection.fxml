@@ -8,21 +8,28 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="500.0" prefWidth="600.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmngr.TasksController">
-    <children>
-      <ButtonBar buttonMinWidth="590.0" prefHeight="50.0" prefWidth="600.0">
-        <buttons>
-          <Button mnemonicParsing="false" text="Button" />
-        </buttons>
-         <padding>
-            <Insets right="15.0" />
-         </padding>
-      </ButtonBar>
-      <TableView fx:id="tasksTable" prefHeight="430.0" prefWidth="600.0">
-        <columns>
-          <TableColumn fx:id="taskColumn" prefWidth="200.0" text="Zadanie" />
-          <TableColumn fx:id="descriptionColumn" prefWidth="200.0" text="Opis" />
-            <TableColumn fx:id="workerColumn" prefWidth="200.0" text="Osoba odpowiedzialna" />
-        </columns>
-      </TableView>
-    </children></VBox>
+<VBox prefHeight="500.0" prefWidth="1000.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmngr.TasksController">
+  <children>
+    <ButtonBar buttonMinWidth="300.0" prefHeight="50.0" prefWidth="1000.0">
+      <buttons>
+        <Button mnemonicParsing="false" onAction="#updateTaskStatus" text="Zmień status na 'w trakcie'" />
+        <Button mnemonicParsing="false" onAction="#finishTaskStatus" text="Zmień status na 'zrealizowane'" />
+      </buttons>
+      <padding>
+        <Insets right="200.0" />
+      </padding>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+    </ButtonBar>
+    <TableView fx:id="tasksTable" prefHeight="430.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+      <columns>
+        <TableColumn fx:id="taskColumn" prefWidth="200.0" text="Zadanie" />
+        <TableColumn fx:id="descriptionColumn" prefWidth="200.0" text="Opis" />
+        <TableColumn fx:id="workerColumn" prefWidth="200.0" text="Osoba odpowiedzialna" />        
+        <TableColumn fx:id="startDateColumn" prefWidth="200.0" text="Data rozpoczęcia zadania" />
+        <TableColumn fx:id="statusColumn" prefWidth="50.0" text="Status" />
+      </columns>
+    </TableView>
+  </children>
+</VBox>

@@ -45,6 +45,10 @@ public class ManageTasksController {
     private TableColumn<Task, String> descriptionColumn;
     @FXML
     private TableColumn<Task, String> workerColumn;
+    @FXML
+    private TableColumn<Task, String> startDateColumn;
+    @FXML
+    private TableColumn<Task, String> statusColumn;
 
     @FXML
     private void initialize() {
@@ -54,6 +58,8 @@ public class ManageTasksController {
         taskColumn.setCellValueFactory(new PropertyValueFactory<>("task"));
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
         workerColumn.setCellValueFactory(new PropertyValueFactory<>("worker"));
+        startDateColumn.setCellValueFactory(new PropertyValueFactory<>("startDate"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
 
         tasksTable.setItems(tasks);
     }
@@ -110,7 +116,6 @@ public class ManageTasksController {
         tasks.add(newTask);
         saveTasks(); // Teraz zapiszemy pełne dane do pliku JSON
         System.out.println("Dodano zadanie dla: " + selectedWorker);
-
         // Czyść pola po dodaniu zadania
         addTaskField.clear();
         addDescriptionField.clear();
