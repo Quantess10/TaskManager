@@ -81,14 +81,7 @@
             <HBox prefHeight="50.0" prefWidth="1200" style="-fx-background-color: #14213d;" BorderPane.alignment="CENTER" />
          </top>
          <center>
-            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-               <children>
-                  <ButtonBar prefHeight="40.0" prefWidth="200.0">
-                    <buttons>
-                      <Button mnemonicParsing="false" text="Button" />
-                    </buttons>
-                  </ButtonBar>
-               </children></VBox>
+            <fx:include source="reportsSection.fxml" />
          </center>
       </BorderPane>
    </children>

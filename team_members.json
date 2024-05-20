@@ -1,1 +1,27 @@
-[{"firstName":"Marek","lastName":"Marecki","position":"Kierownik"},{"firstName":"Tomasz","lastName":"Tomaszewski","position":"Tester"},{"firstName":"Karolina","lastName":"Maciejewska","position":"Tester"},{"firstName":"Marcin","lastName":"Marcinowski","position":"Programista"},{"firstName":"Łukasz","lastName":"Olesik","position":"Student"}]
+[
+    {
+        "firstName": "Marek",
+        "lastName": "Marecki",
+        "position": "Kierownik"
+    },
+    {
+        "firstName": "Tomasz",
+        "lastName": "Tomaszewski",
+        "position": "Tester"
+    },
+    {
+        "firstName": "Karolina",
+        "lastName": "Maciejewska",
+        "position": "Tester"
+    },
+    {
+        "firstName": "Marcin",
+        "lastName": "Marcinowski",
+        "position": "Programista"
+    },
+    {
+        "firstName": "Łukasz",
+        "lastName": "Olesik",
+        "position": "Student"
+    }
+]

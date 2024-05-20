@@ -14,5 +14,7 @@ będzie rzutować na ocenę końcową.
 
 System zarządzania zadaniami w zespole 
 Stworzenie aplikacji do zarządzania zadaniami w zespole, w którym użytkownik może za pomocą 
-interaktywnego interfejsu graficznego: - dodawać członków zespołu, - dodawać zadania, - przypisywać zadania, - oznaczać zadania jako do zrobienia, w trakcie, zakończone, - generować podstawowe raporty statystyk, tj. ilość przypisanych zadań do członków zespołu, ilość 
+interaktywnego interfejsu graficznego: - dodawać członków zespołu, - dodawać zadania, - przypisywać zadania, - oznaczać zadania jako do zrobienia, w trakcie, zakończone, -
+
+ generować podstawowe raporty statystyk, tj. ilość przypisanych zadań do członków zespołu, ilość 
 czasu spędzonego nad zadaniem (liczy on momentu przypisania do jego zakończenia). 

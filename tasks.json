@@ -1,1 +1,142 @@
-[{"task":"Zadanie testowe","description":"test test","worker":"Tomasz Tomaszewski","status":"\u0000"},{"task":"dsad","description":"234234","worker":"Karolina Maciejewska","status":"\u0000"},{"task":"Zakładka zadania","description":"Praca nad zakładką zadania","worker":"Łukasz Olesik","status":"\u0000"},{"task":"Projekt zaliczeniowy PP","description":"Utworzenie aplikacji do zarządzania zadaniami w zespole.","worker":"Łukasz Olesik","status":"\u0000"},{"task":"Projekt zaliczeniowy Bazy Danych","description":"Stowrzenie struktury bazy danych, uzupełnienie tabel oraz wykonanie kilku zapytań.","worker":"Łukasz Olesik","status":"\u0000"},{"task":"asdas","description":"dassa","worker":"Tomasz Tomaszewski","startDate":{"year":0,"month":0,"day":0},"status":"\u0000"},{"task":"dfgdfg","description":"dfgdfg","worker":"Karolina Maciejewska","startDate":{"year":2024,"month":5,"day":20},"status":"Z"},{"task":"6456","description":"ertyerty","worker":"Karolina Maciejewska","startDate":{"year":2024,"month":5,"day":20},"status":"Z"},{"task":"kl;kl;","description":"kl;kl;","worker":"Karolina Maciejewska","startDate":{"year":2024,"month":5,"day":20},"status":"Z"},{"task":"asdas","description":"sdasd","worker":"Karolina Maciejewska","startDate":{"year":2024,"month":5,"day":20},"status":"Z"},{"task":"fdsfsd","description":"fsdfsd","worker":"Marcin Marcinowski","startDate":{"year":2024,"month":5,"day":20},"status":"Z"},{"task":"kjljk","description":"jkljk","worker":"Karolina Maciejewska","startDate":{"year":2024,"month":5,"day":20},"status":"Z"},{"task":"dfgdfg","description":"fdgdfg","worker":"Karolina Maciejewska","startDate":{"year":2024,"month":5,"day":20},"finishDate":{"year":2024,"month":5,"day":20},"status":"Z"},{"task":" dgfgdfg","description":"dfgdfg","worker":"Karolina Maciejewska","startDate":{"year":2024,"month":5,"day":20},"finishDate":{"year":2024,"month":5,"day":20},"status":"Z"},{"task":"asdasd","description":"asdasd","worker":"Karolina Maciejewska","startDate":{"year":2024,"month":5,"day":20},"finishDate":{"year":2024,"month":5,"day":20},"status":"Z"}]
+[
+    {
+        "task": "Programowanie \u0027Zrealizowane\u0027",
+        "description": "Zaprogramuj zakładkę \u0027Zrealizowane\u0027",
+        "worker": "Łukasz Olesik",
+        "startDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 15
+        },
+        "finishDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 20
+        },
+        "status": "Z"
+    },
+    {
+        "task": "Programowanie \u0027Zarządzanie zadaniami\u0027",
+        "description": "Zaprogramuj zakładkę \u0027Zarządzanie zadaniami\u0027",
+        "worker": "Łukasz Olesik",
+        "startDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 14
+        },
+        "finishDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 16
+        },
+        "status": "Z"
+    },
+    {
+        "task": "Programowanie \u0027Zadania\u0027",
+        "description": "Zaprogramuj zakładkę \u0027Zadania\u0027",
+        "worker": "Łukasz Olesik",
+        "startDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 18
+        },
+        "finishDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 20
+        },
+        "status": "Z"
+    },
+    {
+        "task": "Programowanie \u0027Zarządzanie zespołem\u0027",
+        "description": "Zaprogramuj zakładkę \u0027Zarządzanie zespołem\u0027",
+        "worker": "Łukasz Olesik",
+        "startDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 1
+        },
+        "finishDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 10
+        },
+        "status": "Z"
+    },
+    {
+        "task": "Programowanie \u0027Statystyki\u0027",
+        "description": "Zaprogramuj zakładkę \u0027Statystyki\u0027",
+        "worker": "Łukasz Olesik",
+        "startDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 11
+        },
+        "finishDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 16
+        },
+        "status": "Z"
+    },
+    {
+        "task": "Przetestuj aplikację",
+        "description": "Przetestuj aplikację według różnych scenariuszy.",
+        "worker": "Tomasz Tomaszewski",
+        "startDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 16
+        },
+        "status": "W"
+    },
+    {
+        "task": "Przetestuj aplikację",
+        "description": "Przetestuj aplikację według różnych scenariuszy.",
+        "worker": "Karolina Maciejewska",
+        "startDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 14
+        },
+        "status": "W"
+    },
+    {
+        "task": "Przygotuj opis projektu",
+        "description": "Uzupełnij plik README.md",
+        "worker": "Marek Marecki",
+        "startDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 10
+        },
+        "status": "N"
+    },
+    {
+        "task": "Utwórz GitHub",
+        "description": "Utwórz repozytorium na GitHub",
+        "worker": "Marcin Marcinowski",
+        "startDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 15
+        },
+        "status": "N"
+    },
+    {
+        "task": "Zainstaluj środowisko",
+        "description": "Przygotuj środowisko do programowania w Java",
+        "worker": "Marek Marecki",
+        "startDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 16
+        },
+        "finishDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 16
+        },
+        "status": "Z"
+    }
+]

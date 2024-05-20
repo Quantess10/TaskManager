@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="500.0" prefWidth="1000.0" BorderPane.alignment="CENTER"
+  xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.taskmngr.ReportsController">
+  <children>
+    <ButtonBar buttonMinWidth="300.0" prefHeight="50.0" prefWidth="1000.0">
+      <VBox.margin>
+        <Insets />
+      </VBox.margin>
+      <buttons>
+        <ChoiceBox fx:id="workerChoice" prefWidth="300.0" />
+      </buttons>
+      <padding>
+        <Insets right="350.0" />
+      </padding>
+    </ButtonBar>
+    <TableView fx:id="reportsTable" prefHeight="200.0" prefWidth="1000.0"
+      BorderPane.alignment="CENTER">
+      <columns>
+        <TableColumn fx:id="taskColumn" prefWidth="200.0" text="Zadanie" />
+        <TableColumn fx:id="startDateColumn" prefWidth="160.0" text="Data rozpoczęcia zadania" />
+        <TableColumn fx:id="finishDateColumn" prefWidth="160.0" text="Data zakończenia zadania" />
+        <TableColumn fx:id="statusColumn" prefWidth="50.0" text="Status" />
+        <TableColumn fx:id="countDaysColumn" prefWidth="200.0" text="Dni spędzonych nad zadaniem" />
+      </columns>
+    </TableView>
+    <PieChart maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="250.0" prefWidth="400.0" title="Ilość zadań z podziałem na status realizacji">
+      <VBox.margin>
+        <Insets left="300.0" />
+      </VBox.margin>
+    </PieChart>
+  </children>
+</VBox>

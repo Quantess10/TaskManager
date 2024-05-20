@@ -1,6 +1,7 @@
 package com.taskmngr;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class Task {
     private String task;
@@ -9,6 +10,7 @@ public class Task {
     private LocalDate startDate;
     private LocalDate finishDate;
     private String status;
+    private int countDays;
 
     public Task(String task, String description, String worker) {
         this.task = task;
@@ -47,7 +49,7 @@ public class Task {
         return startDate;
     }
 
-    public LocalDate getFinishtDate() {
+    public LocalDate getFinishDate() {
         return finishDate;
     }
 
@@ -61,5 +63,20 @@ public class Task {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public int getCountDays() {
+        return countDays;
+    }
+
+    public void setCountDays(int countDays) {
+        this.countDays = countDays;
+    }
+
+    public long getDaysBetween() {
+        if (startDate != null && finishDate != null) {
+            return ChronoUnit.DAYS.between(startDate, finishDate);
+        }
+        return 0;
     }
 }
