@@ -25,9 +25,9 @@
     <TableView fx:id="tasksTable" prefHeight="430.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
       <columns>
         <TableColumn fx:id="taskColumn" prefWidth="200.0" text="Zadanie" />
-        <TableColumn fx:id="descriptionColumn" prefWidth="200.0" text="Opis" />
+        <TableColumn fx:id="descriptionColumn" prefWidth="395.0" text="Opis" />
         <TableColumn fx:id="workerColumn" prefWidth="200.0" text="Osoba odpowiedzialna" />        
-        <TableColumn fx:id="startDateColumn" prefWidth="200.0" text="Data rozpoczęcia zadania" />
+        <TableColumn fx:id="startDateColumn" prefWidth="150.0" text="Data rozpoczęcia zadania" />
         <TableColumn fx:id="statusColumn" prefWidth="50.0" text="Status" />
       </columns>
     </TableView>

@@ -12,18 +12,15 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="500.0" prefWidth="600.0" BorderPane.alignment="CENTER"
-   xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-   fx:controller="com.taskmngr.ManageTasksController">
+<VBox prefHeight="500.0" prefWidth="1000.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.taskmngr.ManageTasksController">
    <children>
-      <VBox prefHeight="60.0" prefWidth="600.0">
+      <VBox prefHeight="60.0" prefWidth="1000.0">
          <children>
             <HBox prefHeight="30.0" prefWidth="200.0">
                <children>
                   <VBox prefHeight="20.0" prefWidth="200.0">
                      <children>
-                        <Label prefHeight="40.0" prefWidth="200.0" text="Zadanie"
-                           textAlignment="CENTER">
+                        <Label prefHeight="40.0" prefWidth="200.0" text="Zadanie" textAlignment="CENTER">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
@@ -35,8 +32,7 @@
                   </VBox>
                   <VBox prefHeight="60.0" prefWidth="200.0">
                      <children>
-                        <Label prefHeight="40.0" prefWidth="200.0" text="Opis"
-                           textAlignment="CENTER">
+                        <Label prefHeight="40.0" prefWidth="200.0" text="Opis" textAlignment="CENTER">
                            <padding>
                               <Insets left="20.0" />
                            </padding>
@@ -45,8 +41,7 @@
                   </VBox>
                   <VBox prefHeight="30.0" prefWidth="200.0">
                      <children>
-                        <Label prefHeight="40.0" prefWidth="200.0" text="Osoba odpowiedzialna"
-                           textAlignment="CENTER">
+                        <Label prefHeight="40.0" prefWidth="200.0" text="Osoba odpowiedzialna" textAlignment="CENTER">
                            <padding>
                               <Insets left="20.0" />
                            </padding>
@@ -54,6 +49,12 @@
                      </children>
                   </VBox>
                </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="180.0" top="5.0" />
+               </padding>
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="200.0">
                <children>
@@ -77,7 +78,7 @@
                   </VBox>
                   <VBox prefHeight="30.0" prefWidth="200.0">
                      <children>
-                        <ChoiceBox prefWidth="200.0" fx:id="setWorkerChoice">
+                        <ChoiceBox fx:id="setWorkerChoice" prefWidth="200.0">
                            <VBox.margin>
                               <Insets left="5.0" right="10.0" />
                            </VBox.margin>
@@ -85,25 +86,25 @@
                      </children>
                   </VBox>
                </children>
+               <padding>
+                  <Insets left="180.0" />
+               </padding>
             </HBox>
          </children>
       </VBox>
       <ButtonBar prefHeight="40.0" prefWidth="600.0">
          <buttons>
-            <Button minWidth="600.0" mnemonicParsing="false" onAction="#addTask" prefHeight="30.0"
-               prefWidth="600.0" text="Dodaj zadanie">
+            <Button minWidth="600.0" mnemonicParsing="false" onAction="#addTask" prefHeight="30.0" prefWidth="600.0" text="Dodaj zadanie">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button minWidth="600.0" mnemonicParsing="false" onAction="#editTask" prefHeight="30.0"
-               prefWidth="600.0" text="Edytuj zadanie">
+            <Button minWidth="600.0" mnemonicParsing="false" onAction="#editTask" prefHeight="30.0" prefWidth="600.0" text="Edytuj zadanie">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button layoutX="317.0" layoutY="10.0" minWidth="600.0" mnemonicParsing="false"
-               onAction="#deleteTask" prefHeight="30.0" prefWidth="600.0" text="Usuń zadanie">
+            <Button layoutX="317.0" layoutY="10.0" minWidth="600.0" mnemonicParsing="false" onAction="#deleteTask" prefHeight="30.0" prefWidth="600.0" text="Usuń zadanie">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -116,12 +117,12 @@
             <Insets bottom="10.0" top="10.0" />
          </padding>
       </ButtonBar>
-      <TableView fx:id="tasksTable" prefHeight="400.0" prefWidth="600.0">
+      <TableView fx:id="tasksTable" prefHeight="400.0" prefWidth="1000.0">
          <columns>
             <TableColumn fx:id="taskColumn" prefWidth="200.0" text="Zadanie" />
-            <TableColumn fx:id="descriptionColumn" prefWidth="200.0" text="Opis" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="380.0" text="Opis" />
             <TableColumn fx:id="workerColumn" prefWidth="200.0" text="Osoba odpowiedzialna" />
-            <TableColumn fx:id="startDateColumn" prefWidth="200.0" text="Data rozpoczęcia zadania" />            
+            <TableColumn fx:id="startDateColumn" prefWidth="150.0" text="Data rozpoczęcia zadania" />            
             <TableColumn fx:id="statusColumn" prefWidth="50.0" text="Status" />
          </columns>
       </TableView>
