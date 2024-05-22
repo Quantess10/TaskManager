@@ -20,7 +20,6 @@ public class Task {
         this.status = "N";
     }
 
-    // Gettery i settery
     public String getTask() {
         return task;
     }

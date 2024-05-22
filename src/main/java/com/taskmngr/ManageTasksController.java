@@ -115,9 +115,8 @@ public class ManageTasksController {
 
         Task newTask = new Task(taskName, description, selectedWorker);
         tasks.add(newTask);
-        saveTasks(); // Teraz zapiszemy pełne dane do pliku JSON
+        saveTasks();
         System.out.println("Dodano zadanie dla: " + selectedWorker);
-        // Czyść pola po dodaniu zadania
         addTaskField.clear();
         addDescriptionField.clear();
         setWorkerChoice.getSelectionModel().clearSelection();
@@ -127,13 +126,11 @@ public class ManageTasksController {
     private void editTask() {
         Task selectedTask = tasksTable.getSelectionModel().getSelectedItem();
         if (selectedTask != null) {
-            // Sprawdzanie, czy status zadania pozwala na edycję
             if (!selectedTask.getStatus().equals("W") && !selectedTask.getStatus().equals("Z")) {
                 addTaskField.setText(selectedTask.getTask());
                 addDescriptionField.setText(selectedTask.getDescription());
                 setWorkerChoice.setValue(selectedTask.getWorker());
-                tasksTable.getItems().remove(selectedTask); // To może być ryzykowne, lepiej byłoby przenieść tę logikę
-                                                            // do metody zapisu
+                tasksTable.getItems().remove(selectedTask);
             } else {
                 System.out.println("Zadania w trakcie lub zakończone nie mogą być edytowane.");
             }

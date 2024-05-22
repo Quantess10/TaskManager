@@ -1,20 +1,13 @@
 System zarządzania zadaniami w zespole.
 
+Do uruchomienia programu potrzebne jest pobranie pakietów JavaFX, Maven oraz ustawienia zmiennej środowiskowej dla Maven. 
+Aplikację uruchamiamy poprzez przycisk 'Run Java' dla pliku App.java
 
-Zasady ogólne 
-Projekt zaliczeniowy oddawany jest w formie repozytorium na platformie Github. 
-Repozytorium to, powinno zawierać plik README.md a w nim: - tytuł i nazwa wybranego projektu, np. 1. Zarządzanie książkami, - spis treści, - listę i krótki opis zaimplementowanych w projekcie funkcjonalności, - instrukcje obsługi (czyli jak uruchomić aplikację, czy potrzebne jest pobranie dodatkowych paczek, 
-jak tak to jakich, w jaki sposób je zainstalować itp.). 
-Dodatkowo w repozytorium musi się znaleźć: - kod źródłowy aplikacji, - plik z przykładowymi danymi wejściowymi (jeżeli projekt go wykorzystuje).  
-W skład oceny za projekt zaliczeniowy wchodzi: - wykonanie dokumentacji oraz opisu w pliku README.md, - pokrycie z wymienionymi w zadaniu funkcjonalnościami, - wykorzystanie bibliotek zewnętrznych, - implementacja interfejsu graficznego. 
-Projekt nie musi zawierać wszystkich wspomnianych elementów z jego opisu, jednak brak 
-funkcjonalności będzie rzutował na ocenę końcową z projektu. Projekt może zostać wykonany tylko 
-w konsoli, nawet jeżeli z opisu zadania wynika inaczej. Jednak implementacja interfejsu graficznego, 
-będzie rzutować na ocenę końcową.
+Z uwagi na sposób przekazania pracy wybrałem zapis danych do pliku 'taks.json' oraz 'team_members.json' zamiast bazy danych. Każda wprowadzona zmiana powoduje aktualizację i zapis danych do pliku.
 
-System zarządzania zadaniami w zespole 
-Stworzenie aplikacji do zarządzania zadaniami w zespole, w którym użytkownik może za pomocą 
-interaktywnego interfejsu graficznego: - dodawać członków zespołu, - dodawać zadania, - przypisywać zadania, - oznaczać zadania jako do zrobienia, w trakcie, zakończone, -
-
- generować podstawowe raporty statystyk, tj. ilość przypisanych zadań do członków zespołu, ilość 
-czasu spędzonego nad zadaniem (liczy on momentu przypisania do jego zakończenia). 
+Po otwarciu okna aplikacji dostępne jest 5 zakładek w bocznym menu nawigacyjnym:
+- Zadania: W tej zakładce widoczne są wszystkie utworzone i przypisane zadania ze statusem 'Nowe' oraz 'W trakcie'. U góry dostępne są dwa przyciski zmiany statusu zadania. Zmiana statusu z 'W trakcie' na 'Zrealizowane' spowoduje dodanie daty zakończenia zadania oraz jego usunięcie z tej listy i przeniesienie jej do zakładki 'Zrealizowane'. Nie można zmienić statusu od razu z 'Nowe' na 'Zrealizowane' z pominięciem statusu 'W trakcie'
+- Zrealizowane: Ta zakładka zawiera listę wszystkich zadań jako zrealizowane w poprzedniej zakładce.
+- Zarządzanie zadaniami: Zakładka umożliwia tworzenie, edycję oraz usuwanie zadań. Podczas dodawania zadania należy wypełnić każde pole włącznie z przypisaniem pracownika. Edycja zadania działa na zasadzie usunięcia zadania przeniesienia danych do pól edycji oraz ponownego dodania (Według mnie prostsze rozwiązanie z uwagi na zapis danych do pliku JSON. W przypadku użycia bazy danych można by robić update pól).
+- Zarządzanie zespołem: Zakładka umożliwia dodawanie oraz usuwanie członków zespołu. Podczas dodawania członka zespołu wszystkie pola muszą być uzupełnione.
+- Statystyki: Pierwsze uruchomienie zakładki spowoduje wyświetlenie listy wszystkich utworzonych zadań bez podziału na pracownika. Dostępny jest również wykres kołowy ilustrujący stosunek zadań według statusu 'Nowe', 'W trakcie' oraz 'Zrealizowane'. Po wskazaniu pracownika w oknie wyboru nastąpi wyfiltrowanie zadań przypisanych do danego pracownika.
