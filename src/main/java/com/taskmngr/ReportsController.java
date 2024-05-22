@@ -3,9 +3,8 @@ package com.taskmngr;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -15,16 +14,11 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.io.Reader;
-import java.io.Writer;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -50,12 +44,15 @@ public class ReportsController {
     private TableColumn<Task, Number> countDaysColumn;
     @FXML
     private TableView<Task> reportsTable;
+    @FXML
+    private PieChart statisticsChart;
 
     @FXML
     private void initialize() {
         loadTeamMembers();
         loadTasks();
         populateChoiceBox();
+        updateStatisticsChart();
 
         countDaysColumn.setCellValueFactory(new PropertyValueFactory<>("countDays"));
         taskColumn.setCellValueFactory(new PropertyValueFactory<>("task"));
@@ -68,6 +65,7 @@ public class ReportsController {
         workerChoice.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
                 updateTasksTable(newSelection);
+                updateStatisticsChart(newSelection);
             }
         });
 
@@ -105,8 +103,38 @@ public class ReportsController {
 
     private void updateTasksTable(String employeeName) {
         List<Task> filteredTasks = tasks.stream()
-                .filter(task -> task.getWorker().equals(employeeName))
+                .filter(task -> task.getWorker().trim().equals(employeeName.trim()))
                 .collect(Collectors.toList());
         reportsTable.setItems(FXCollections.observableArrayList(filteredTasks));
     }
+
+    private void updateStatisticsChart() {
+        long newTasks = tasks.stream().filter(task -> "N".equals(task.getStatus())).count();
+        long inProgressTasks = tasks.stream().filter(task -> "W".equals(task.getStatus())).count();
+        long completedTasks = tasks.stream().filter(task -> "Z".equals(task.getStatus())).count();
+
+        ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
+                new PieChart.Data("Nowe (" + newTasks + ")", newTasks),
+                new PieChart.Data("W trakcie (" + inProgressTasks + ")", inProgressTasks),
+                new PieChart.Data("Zrealizowane (" + completedTasks + ")", completedTasks));
+
+        statisticsChart.setData(pieChartData);
+    }
+
+    private void updateStatisticsChart(String selectedWorker) {
+        long newTasks = tasks.stream()
+                .filter(task -> task.getWorker().equals(selectedWorker) && "N".equals(task.getStatus())).count();
+        long inProgressTasks = tasks.stream()
+                .filter(task -> task.getWorker().equals(selectedWorker) && "W".equals(task.getStatus())).count();
+        long completedTasks = tasks.stream()
+                .filter(task -> task.getWorker().equals(selectedWorker) && "Z".equals(task.getStatus())).count();
+
+        ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList(
+                new PieChart.Data("Nowe (" + newTasks + ")", newTasks),
+                new PieChart.Data("W trakcie (" + inProgressTasks + ")", inProgressTasks),
+                new PieChart.Data("Zrealizowane (" + completedTasks + ")", completedTasks));
+
+        statisticsChart.setData(pieChartData);
+    }
+
 }

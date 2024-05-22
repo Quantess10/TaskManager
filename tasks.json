@@ -13,7 +13,8 @@
             "month": 5,
             "day": 20
         },
-        "status": "Z"
+        "status": "Z",
+        "countDays": 0
     },
     {
         "task": "Programowanie \u0027Zarządzanie zadaniami\u0027",
@@ -29,7 +30,8 @@
             "month": 5,
             "day": 16
         },
-        "status": "Z"
+        "status": "Z",
+        "countDays": 0
     },
     {
         "task": "Programowanie \u0027Zadania\u0027",
@@ -45,7 +47,8 @@
             "month": 5,
             "day": 20
         },
-        "status": "Z"
+        "status": "Z",
+        "countDays": 0
     },
     {
         "task": "Programowanie \u0027Zarządzanie zespołem\u0027",
@@ -61,7 +64,8 @@
             "month": 5,
             "day": 10
         },
-        "status": "Z"
+        "status": "Z",
+        "countDays": 0
     },
     {
         "task": "Programowanie \u0027Statystyki\u0027",
@@ -77,7 +81,8 @@
             "month": 5,
             "day": 16
         },
-        "status": "Z"
+        "status": "Z",
+        "countDays": 0
     },
     {
         "task": "Przetestuj aplikację",
@@ -88,7 +93,8 @@
             "month": 5,
             "day": 16
         },
-        "status": "W"
+        "status": "W",
+        "countDays": 0
     },
     {
         "task": "Przetestuj aplikację",
@@ -99,7 +105,8 @@
             "month": 5,
             "day": 14
         },
-        "status": "W"
+        "status": "W",
+        "countDays": 0
     },
     {
         "task": "Przygotuj opis projektu",
@@ -110,7 +117,8 @@
             "month": 5,
             "day": 10
         },
-        "status": "N"
+        "status": "N",
+        "countDays": 0
     },
     {
         "task": "Utwórz GitHub",
@@ -121,7 +129,8 @@
             "month": 5,
             "day": 15
         },
-        "status": "N"
+        "status": "N",
+        "countDays": 0
     },
     {
         "task": "Zainstaluj środowisko",
@@ -137,6 +146,48 @@
             "month": 5,
             "day": 16
         },
-        "status": "Z"
+        "status": "Z",
+        "countDays": 0
+    },
+    {
+        "task": "Testuj aplikację",
+        "description": "Testy",
+        "worker": "Łukasz Olesik",
+        "startDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 22
+        },
+        "finishDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 22
+        },
+        "status": "Z",
+        "countDays": 0
+    },
+    {
+        "task": "Dokumentacja",
+        "description": "Stwórz opis w README.md",
+        "worker": "Łukasz Olesik",
+        "startDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 22
+        },
+        "status": "W",
+        "countDays": 0
+    },
+    {
+        "task": "Testowe zadanie",
+        "description": "Testy",
+        "worker": "Łukasz Olesik",
+        "startDate": {
+            "year": 2024,
+            "month": 5,
+            "day": 22
+        },
+        "status": "N",
+        "countDays": 0
     }
 ]

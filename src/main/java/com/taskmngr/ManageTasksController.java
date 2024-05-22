@@ -97,7 +97,7 @@ public class ManageTasksController {
     private void populateChoiceBox() {
         setWorkerChoice.getItems().clear();
         for (TeamMember member : teamMembers) {
-            String displayText = member.getFullName() + " - " + member.getPosition();
+            String displayText = member.getFullName();
             setWorkerChoice.getItems().add(displayText);
         }
     }

@@ -34,7 +34,7 @@
         <TableColumn fx:id="countDaysColumn" prefWidth="200.0" text="Dni spędzonych nad zadaniem" />
       </columns>
     </TableView>
-    <PieChart maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+    <PieChart fx:id="statisticsChart" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
       prefHeight="250.0" prefWidth="400.0" title="Ilość zadań z podziałem na status realizacji">
       <VBox.margin>
         <Insets left="300.0" />

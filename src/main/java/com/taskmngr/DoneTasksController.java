@@ -56,7 +56,7 @@ public class DoneTasksController {
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
         workerColumn.setCellValueFactory(new PropertyValueFactory<>("worker"));
         startDateColumn.setCellValueFactory(new PropertyValueFactory<>("startDate"));
-        finishDateColumn.setCellValueFactory(new PropertyValueFactory<>("finishtDate"));
+        finishDateColumn.setCellValueFactory(new PropertyValueFactory<>("finishDate"));
 
         tasksTable.setItems(filteredTasks);
     }
